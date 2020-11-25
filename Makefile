@@ -6,7 +6,7 @@
 #    By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 14:23:19 by hroussea          #+#    #+#              #
-#    Updated: 2020/11/23 14:50:53 by hroussea         ###   ########lyon.fr    #
+#    Updated: 2020/11/25 10:41:20 by hroussea         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS	=	ft_memset.c \
 			ft_atoi.c \
 			ft_calloc.c \
 			ft_strdup.c \
+			ft_substr.c \
 
 OBJS	=	${SRCS:.c=.o}
 

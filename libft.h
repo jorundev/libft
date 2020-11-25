@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:40:23 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/23 14:51:04 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 10:39:48 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ char			*ft_strnstr(const char *hstk, const char *ndle, size_t len);
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t num, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
