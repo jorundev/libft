@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 18:55:20 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 12:37:57 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 17:13:04 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-static int	ft_itoa_recursive(int n, int index, char *buf)
+static int	ft_itoa_recursive(long n, int index, char *buf)
 {
 	int tmp;
 
@@ -37,7 +37,7 @@ static int	ft_itoa_recursive(int n, int index, char *buf)
 	}
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char			*ret;
 

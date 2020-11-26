@@ -6,13 +6,13 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:40:04 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/23 14:40:05 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 15:30:33 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char const *str)
 {
 	int i;
 

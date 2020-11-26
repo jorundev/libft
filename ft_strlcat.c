@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:39:57 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/23 14:45:59 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 15:31:32 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	if (d != dstsize)
 		dst[d + s] = 0;
-	return (ft_strlen((char*)src) + d);
+	return (ft_strlen(src) + d);
 }

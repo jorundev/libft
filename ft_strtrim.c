@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 10:56:06 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/25 15:18:50 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 15:44:58 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*limit;
 	size_t	len;
 
-	len = ft_strlen((char*)s1);
+	len = ft_strlen(s1);
 	dst = malloc(len + 1);
 	if (!dst)
 		return (0);
 	ret = dst;
-	while (ft_strchr(set, s1[len - 1]))
+	while (len - 1 && ft_strchr(set, s1[len - 1]))
 		--len;
 	limit = (char*)s1 + len;
 	while (*s1 && ft_strchr(set, *s1))

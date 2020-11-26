@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 14:40:10 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 15:32:26 by hroussea         ###   ########lyon.fr   */
+/*   Created: 2020/11/26 17:07:15 by hroussea          #+#    #+#             */
+/*   Updated: 2020/11/26 17:11:50 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+t_list			*ft_lstnew(void *content)
 {
-	size_t i;
-	size_t slen;
+	struct s_list	*ret;
 
-	if (len == 0)
-		return (0);
-	slen = ft_strlen(needle);
-	if (slen == 0)
-		return ((char*)haystack);
-	i = 0;
-	while (i < --len)
-	{
-		if (ft_strncmp(haystack + i, needle, slen) == 0)
-			return ((char*)haystack + i);
-		++i;
-	}
-	return (0);
+	ret = malloc(sizeof(struct s_list));
+	ret->next = NULL;
+	ret->content = content;
+	return (ret);
 }
