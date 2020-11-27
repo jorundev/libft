@@ -6,7 +6,7 @@
 #    By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 14:23:19 by hroussea          #+#    #+#              #
-#    Updated: 2020/11/26 18:00:55 by hroussea         ###   ########lyon.fr    #
+#    Updated: 2020/11/27 21:13:05 by hroussea         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,12 +45,21 @@ SRCS	=	ft_memset.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-			ft_lstnew.c \
+			ft_putnbr_fd.c
+
+BONUS	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstclear.c \
+			ft_lstmap.c
 
 OBJS	=	${SRCS:.c=.o}
+
+BOBJS	=	${BONUS:.c=.o}
 
 CC		=	gcc
 
@@ -67,14 +76,17 @@ $(NAME):	${OBJS}
 		${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-		rm -f ${OBJS}
+		rm -f ${OBJS} ${BOBJS}
 
 fclean:	clean
 		rm -f ${NAME}
 
 re: fclean all
 
+bonus: ${OBJS} ${BOBJS}
+		ar rc $(NAME) ${OBJS} ${BOBJS}
+
 norme:
 		norminette **.c **.h
 
-.PHONY: all clean fclean re norme
+.PHONY: all clean fclean re norme bonus

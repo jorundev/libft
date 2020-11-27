@@ -6,13 +6,21 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:27:06 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 16:31:00 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 22:24:08 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+static char	**ft_split_clrmem(char **strs, size_t mi)
+{
+	while (mi--)
+		free(strs[mi]);
+	free(strs);
+	return (0);
+}
+
+char		**ft_split(char const *s, char c)
 {
 	char	**ret;
 	char	*begin;
@@ -31,7 +39,7 @@ char	**ft_split(char const *s, char c)
 		if (s != begin)
 		{
 			if (!(ret[mi] = malloc(s - begin + 1)))
-				return (0);
+				return (ft_split_clrmem(ret, mi));
 			ft_memcpy(ret[mi], begin, s - begin);
 			ret[mi++][s - begin] = 0;
 		}
