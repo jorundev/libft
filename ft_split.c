@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:27:06 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/27 22:24:08 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/11/28 03:03:37 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char		**ft_split(char const *s, char c)
 	size_t	mi;
 
 	mi = 0;
-	if (!(ret = malloc(sizeof(char*) * (ft_strlen(s) + 1 / 2 + 1))))
+	if (!(ret = malloc(sizeof(char*) * (ft_strlen(s) / 2 + 1) + 1)))
 		return (0);
 	while (*s)
 	{
