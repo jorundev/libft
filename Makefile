@@ -6,7 +6,7 @@
 #    By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 14:23:19 by hroussea          #+#    #+#              #
-#    Updated: 2020/11/27 21:13:05 by hroussea         ###   ########lyon.fr    #
+#    Updated: 2020/12/01 14:37:28 by hroussea         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ NAME	=	libft.a
 all:	${NAME}
 
 $(NAME):	${OBJS}
-			ar rc $@ ${OBJS}
+			ar rcs $@ ${OBJS}
 
 %.o:	%.c
 		${CC} ${CFLAGS} -c $< -o $@
@@ -83,10 +83,10 @@ fclean:	clean
 
 re: fclean all
 
-bonus: ${OBJS} ${BOBJS}
-		ar rc $(NAME) ${OBJS} ${BOBJS}
+bonus: ${NAME} ${BOBJS}
+		ar rcs $(NAME) ${BOBJS}
 
 norme:
-		norminette **.c **.h
+		norminette *.c *.h
 
 .PHONY: all clean fclean re norme bonus
