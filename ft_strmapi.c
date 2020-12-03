@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:35:32 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 16:54:23 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 16:13:21 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	ret = ft_strdup(s);
+	if (!ret)
+		return (0);
 	i = 0;
 	while (s[i])
 	{

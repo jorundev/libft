@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 10:32:40 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 16:14:58 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 14:20:23 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dst;
 	size_t	i;
+	size_t	slen;
 
 	dst = malloc(len + 1);
 	if (!dst)
 		return (0);
 	i = 0;
-	if (start < len)
+	slen = ft_strlen(s);
+	if (start < slen)
 		while (s[start + i] && i < len)
 		{
 			dst[i] = s[start + i];

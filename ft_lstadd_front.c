@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 17:13:15 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 18:31:52 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 18:04:14 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	new->next = *alst;
-	*alst = new;
+	if (*alst == NULL)
+		*alst = new;
+	else
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }
