@@ -6,7 +6,7 @@
 #    By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 14:23:19 by hroussea          #+#    #+#              #
-#    Updated: 2020/12/01 14:37:28 by hroussea         ###   ########lyon.fr    #
+#    Updated: 2020/12/04 03:02:01 by hroussea         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ NAME	=	libft.a
 
 all:	${NAME}
 
-$(NAME):	${OBJS}
+$(NAME):	${OBJS} libft.h
 			ar rcs $@ ${OBJS}
 
 %.o:	%.c

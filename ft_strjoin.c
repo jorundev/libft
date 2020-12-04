@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 10:46:03 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 15:31:28 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 22:52:46 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*dst;
 	char	*ret;
 
+	if (!s1 || !s2)
+		return (0);
 	dst = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!dst)
 		return (0);

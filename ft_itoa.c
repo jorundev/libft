@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 18:55:20 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/26 17:13:04 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 01:12:35 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,24 @@
 
 #include <stdio.h>
 
-static int	ft_itoa_recursive(long n, int index, char *buf)
+static size_t	ft_nbrlen(int n)
+{
+	size_t total;
+
+	total = 0;
+	if (n < 0)
+		total = 1;
+	if (!n)
+		return (1);
+	while (n)
+	{
+		n /= 10;
+		++total;
+	}
+	return (total);
+}
+
+static int		ft_itoa_recursive(long n, int index, char *buf)
 {
 	int tmp;
 
@@ -37,11 +54,16 @@ static int	ft_itoa_recursive(long n, int index, char *buf)
 	}
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char			*ret;
+	size_t			len;
 
-	ret = ft_calloc(12, 1);
+	len = ft_nbrlen(n);
+	ret = ft_calloc(len + 1, 1);
+	if (!ret)
+		return (0);
+	ret[len] = 0;
 	ft_itoa_recursive(n, 0, ret);
 	return (ret);
 }

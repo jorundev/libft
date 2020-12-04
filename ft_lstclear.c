@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 20:16:39 by hroussea          #+#    #+#             */
-/*   Updated: 2020/11/27 20:25:59 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 00:22:12 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		list = nxt;
 		nxt = list->next;
-		del(list->content);
+		if (del)
+			del(list->content);
 		free(list);
 	}
 	*lst = NULL;

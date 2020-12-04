@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 20:26:50 by hroussea          #+#    #+#             */
-/*   Updated: 2020/12/03 20:24:16 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 00:21:41 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	struct s_list	*current_new;
 	struct s_list	*begin;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (0);
 	if (!(begin = ft_lstnew((*f)(lst->content))))
 		return (ft_lstmap_clr(&begin, del));
