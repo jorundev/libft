@@ -6,7 +6,7 @@
 /*   By: hroussea <hroussea@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:40:10 by hroussea          #+#    #+#             */
-/*   Updated: 2020/12/09 12:08:30 by hroussea         ###   ########lyon.fr   */
+/*   Updated: 2020/12/10 11:41:20 by hroussea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t size)
 {
 	size_t i;
 	size_t j;
+
 	i = 0;
 	j = 0;
 	if (!needle[0])
